@@ -1,10 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Weather from './Weather'
+import { useState } from "react";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import "./style.css"
+export default function App() {
+  const [city, setCity] = useState(""); // lift state here
 
-export default function App(){
-  return(
-    <Weather/>
-  )
+  return (
+    <section className="SectionMain">
+      <Header city={city} setCity={setCity}/>
+      <Main city={city}/>
+    </section>
+  );
 }

@@ -23,10 +23,11 @@ const Weather = () => {
     try {
       // Call your backend
       const response = await fetch(`http://localhost:5000/weather?city=${city}`);
-      const data = await response.json();
+      const data = await response.json(); 
 
       if (data.cod === 200) {
         setWeather(data);
+        console.log(data)
       } else {
         setError(data.message || 'City not found');
       }
@@ -51,10 +52,8 @@ const Weather = () => {
         />
         <button type="submit">Get Weather</button>
       </form>
-
       {loading && <p>Loading...</p>}
       {error && <p className="error">{error}</p>}
-
       {weather && weather.sys && weather.main && weather.weather && (
         <div className="weather-info">
           <h2>{weather.name}, {weather.sys.country}</h2>
