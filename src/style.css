@@ -1,103 +1,23 @@
-* {
-  margin: 0;
+*{
   padding: 0;
-  box-sizing: border-box;
+  margin: 0;
   font-family: sans-serif;
 }
-
-body {
-  min-height: 100vh;
-}
-
-
-.SectionMain{
+/* Header */
+.mainSection{
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #0e6aff;
 }
-.infoDiv{
+
+header{
   width: 100%;
-  height: calc(100vh - 50px);
+  height: 9vh;
+  background-color: red;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-
 }
-.infoContainer{
-  width: 90%;
-  max-width: 1000px;
-  height: 90%;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-/* Header styling */
-header {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 10px 20px;
-  background-color: #0e6aff;
-  /* Add shadow */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* horizontal, vertical, blur, color */
-}
-
-
-/* Form inside header */
-header form {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* space between input and button */
-}
-
-/* Input styling */
-header input {
-  width: 250px;
-  height: 35px;
-  border-radius: 50px;
-  border: none;
-  background-color: white;
-  text-align: center;
-  color: black;
-  font-size: 14px;
-  padding: 0 10px;
-}
-
-header input:focus {
-  outline: none;            /* remove blue/colored outline on focus */
-  box-shadow: none;         /* remove any focus shadow (optional) */
-  border: 1px solid black;   /* keep border same on focus */
-}
-
-/* Circular search button */
-header form button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  padding: 0;
-}
-
-header form button img {
-  width: 60%;
-}
-
-/* App logo */
-#appLogo {
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5rem;
+header img{
+  width: 50px;
+  padding-left: 20px;
 }

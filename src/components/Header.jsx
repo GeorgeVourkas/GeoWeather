@@ -1,29 +1,10 @@
-import searchIcon from "../assets/search.png"
-export default function Header({ city, setCity }) {
+import sunIcon from "../assets/sunIcon.png"; // or .svg depending on file
 
-  function getWeather(e) {
-    e.preventDefault();
-    console.log("City entered:", city);
-    
-    // TODO: call API
-
-    setCity(""); // clear input
-  }
-
+export default function Header() {
   return (
-    <header>  
-      <form onSubmit={getWeather}>
-        <input
-          type="text"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          placeholder="Enter city name..."
-        />
-        <button type="submit">
-          <img src={searchIcon} alt="Search Icon" />
-        </button>
-      </form>
-      <h1 id="appLogo">GeoWeather</h1>
+    <header>
+      <img src={sunIcon} alt="Sun Icon" />
+      <h1>GeoWeather</h1>
     </header>
   );
 }
