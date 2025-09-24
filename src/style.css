@@ -33,7 +33,7 @@
 /* Background view div */
 .backgroundView{
   width: 100%;
-  height: 45vh;
+  height: 50vh;
   background-image: url(assets/sky.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -51,4 +51,19 @@
   width: 40vw;
   padding: 12px 15px;
   border-radius: 50px;
+}
+
+/* Information Section */
+.infoSection{
+  width: 100vw;
+  height: 50vh;
+  background-color: red;
+}
+
+/* Popular cities Section */
+
+.popularSection{
+  width: 100vw;
+  height: 50vh;
+  background-color: red;
 }
