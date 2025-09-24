@@ -1,0 +1,94 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+  
+
+/* Information Section */
+.infoSection{
+  width: 100vw;
+  height: 50vh;
+  background-color: white;
+}
+
+/* Popular cities Section */
+
+.popularSection{
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white ;
+  gap: 20px;
+}
+
+/* City Block  */
+.cityInfoBlock{
+  display: flex;
+  width:200px;
+  height: 250px;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  color: black;
+
+}
+.upperHalf{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  
+}
+.lowerHalf{
+  width: 100%;
+  height: 50%;
+}
+.uppperLeft{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  
+
+}
+.uppperLeft h2{
+  font-size: 2.2rem;
+  padding-left: 20px;
+}
+.uppperLeft h3 {
+  font-size: 0.9rem;
+  padding-left: 20px;
+}
+.upperRight{
+    width: 40%;
+    display: flex;
+    justify-content: left;
+    align-items:center
+}
+
+.upperRight img{
+  width: 80%;
+}
+
+.lowerHalf{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.lowerHalf p{
+  padding-left: 20px;   
+}
+
+@media (max-width: 800px) {
+  .popularSection {
+    width: 100%;
+
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0px;
+  }
+}

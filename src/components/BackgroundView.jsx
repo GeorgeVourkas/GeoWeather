@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../styles/backgroundView.css"
 export default function BackgroundView() {
   const [input, setInput] = React.useState("");
 

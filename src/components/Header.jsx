@@ -1,5 +1,5 @@
-import sunIcon from "../assets/sunIcon.png"; // or .svg depending on file
-
+import sunIcon from "../assets/sunIcon.png"; 
+import "../styles/header.css"
 export default function Header() {
   return (
     <header className="header">
