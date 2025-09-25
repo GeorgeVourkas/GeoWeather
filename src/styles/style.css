@@ -3,7 +3,7 @@
   margin: 0;
   font-family: sans-serif;
 }
-  
+
 
 /* Information Section */
 .infoSection{
@@ -40,12 +40,13 @@
   height: 50%;
   display: flex;
   
+  
 }
 .lowerHalf{
   width: 100%;
   height: 50%;
 }
-.uppperLeft{
+.upperLeft{
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -53,13 +54,14 @@
   align-items: baseline;
   gap: 10px;
   
+  
 
 }
-.uppperLeft h2{
+.upperLeft h2{
   font-size: 2.2rem;
   padding-left: 20px;
 }
-.uppperLeft h3 {
+.upperLeft h3 {
   font-size: 0.9rem;
   padding-left: 20px;
 }
