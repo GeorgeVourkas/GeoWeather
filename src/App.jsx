@@ -11,7 +11,7 @@ export default function App() {
       <section className="mainSection">
         <Header/>
         <BackgroundView/>
-        {/* <InformationSection/> */}
+        <InformationSection/>
         <PopularCities/>
       </section>
   

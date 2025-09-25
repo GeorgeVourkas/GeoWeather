@@ -19,15 +19,15 @@ export default function PopularCities() {
 
   useEffect(() => {
     async function fetchWeather() {
-      const apiKey = "69c7daa9223cbc43fab0367cc0f76034";
+        const apiKey = "69c7daa9223cbc43fab0367cc0f76034";
 
-      // Fetch weather for all favorite cities
-      const promises = favoriteCities.map(async (city) => {
+        // Fetch weather for all favorite cities
+        const promises = favoriteCities.map(async (city) => {
         const res = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
         );
         return res.json();
-      });
+        });
 
       const results = await Promise.all(promises);
       setCitiesWeather(results);
