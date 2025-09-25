@@ -16,8 +16,8 @@
   gap: 5px ;
 }
 #header.scrolled {
-  background: black; 
-  transition: 0.8s ease;
+  background: #303030; 
+  transition: 1.2s ease;
   height: 7vh;
 }
 
