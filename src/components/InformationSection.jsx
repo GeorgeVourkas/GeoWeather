@@ -10,8 +10,8 @@ export default function InformationSection(props){
                 </div> */}
                 <div className="contLeft">
                     <div className="contLeftUp">
-                        <img src={sunnyIcon} alt="WeatherIcon" />
-                        <h1>23°</h1>
+                        <img src={`http://openweathermap.org/img/wn/${props.city.weather[0].icon}.png`} alt="WeatherIcon" />
+                        <h1>{Math.round(props.city.main.temp)}°</h1>
                     </div>
                     <div className="contLeftDown">
                         {/* <h2 className="cityName">{props.selectedCityName? props.selectedCityName.name: "No city found"}</h2> */}
@@ -25,7 +25,7 @@ export default function InformationSection(props){
                     <div className="infoContainer">
                         <div className="infoRow">
                             <p>Feels like:</p>
-                            <p>{Math.round(props.city.main.feels_like)}</p>
+                            <p>{Math.round(props.city.main.feels_like)}°</p>
                         </div>
                         <div className="infoRow">
                             <p>Humidity:</p>
