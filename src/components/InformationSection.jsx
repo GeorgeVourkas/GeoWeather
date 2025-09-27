@@ -27,10 +27,10 @@ export default function InformationSection(props) {
     <AnimatePresence>
         <motion.div 
             className="infoSection"
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
+            exit={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.5 }}
         >
             <div className="container">
                 <div className="contLeft">
