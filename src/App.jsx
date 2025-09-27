@@ -7,7 +7,7 @@ import "./styles/style.css";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function App() {
-  const apiKey = "69c7daa9223cbc43fab0367cc0f76034";
+  const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
   const [selectedCityName, setSelectedCityName] = useState("");
   const [selectedCity, setSelectedCity] = useState(null);

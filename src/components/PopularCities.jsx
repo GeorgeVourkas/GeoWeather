@@ -1,15 +1,3 @@
-// import React from "react"
-// import CityInfoBlock from "./CityInfoBlock"
-// export default function PopularCities (){
-    
-//     return(
-//         <section className="popularSection">
-//             <CityInfoBlock/>
-//             <CityInfoBlock/>
-//         </section>
-//     )
-// }
-
 import React, { useEffect, useState } from "react";
 import CityInfoBlock from "./CityInfoBlock";
 import favoriteCities from "../favorites";
@@ -19,18 +7,25 @@ export default function PopularCities() {
 
   useEffect(() => {
     async function fetchWeather() {
-        const apiKey = "69c7daa9223cbc43fab0367cc0f76034";
+      const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
+      if (!apiKey){
+        console.error("OpenWeather API key not found!");
+        return;
+      }
 
-        // Fetch weather for all favorite cities
+      try {
         const promises = favoriteCities.map(async (city) => {
-        const res = await fetch(
+          const res = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-        );
-        return res.json();
+          );
+          return res.json();
         });
 
-      const results = await Promise.all(promises);
-      setCitiesWeather(results);
+        const results = await Promise.all(promises);
+        setCitiesWeather(results);
+      } catch (err) {
+        console.error("Error fetching weather for favorite cities:", err);
+      }
     }
 
     fetchWeather();
