@@ -86,7 +86,15 @@ html, body {
 .lowerHalf p{
   padding-left: 20px;   
 }
-
+.errorMessage{
+  width: 100%;
+  height: 100px;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
 @media (max-width: 800px) {
   .popularSection {
     width: 100%;
