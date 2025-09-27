@@ -25,7 +25,7 @@ export default function InformationSection(props){
                     <div className="infoContainer">
                         <div className="infoRow">
                             <p>Feels like:</p>
-                            <p>25°</p>
+                            <p>{Math.round(props.city.main.feels_like)}</p>
                         </div>
                         <div className="infoRow">
                             <p>Humidity:</p>
