@@ -1,8 +1,9 @@
 import sunnyIcon from "../assets/sunnyIcon.png"
 import "../styles/informationSection.css"
-export default function InformationSection(){
+export default function InformationSection(props){
+    console.log(props)
     return(
-        <section className="infoSection">
+        props.city && <section className="infoSection">
             <div className="container">
                 {/* <div className="cityName">
                     <h1>Kastoria</h1>
@@ -13,8 +14,9 @@ export default function InformationSection(){
                         <h1>23°</h1>
                     </div>
                     <div className="contLeftDown">
-                        <h2 className="cityName">Kastoria</h2>
-                        <h2 className="weatherDescription">Sunny</h2>
+                        {/* <h2 className="cityName">{props.selectedCityName? props.selectedCityName.name: "No city found"}</h2> */}
+                    <h2 className="cityName">{props.city.name}</h2>
+                        <h2 className="weatherDescription">{props.city.weather[0].description}</h2>
                         <h3 className="time">16:54</h3>
                     </div>
                 </div>
