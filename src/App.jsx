@@ -48,7 +48,7 @@ export default function App() {
       infoRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [selectedCity]);
-
+  
   return (
     <section className="mainSection">
       <Header />
@@ -56,13 +56,10 @@ export default function App() {
         selectedCityName={selectedCityName}
         setSelectedCityName={setSelectedCityName}
       />
-
-      {/* show weather info if city is found */}
       {selectedCity && (
         <InformationSection city={selectedCity} setcity={selectedCityName}  ref={infoRef} />
       )}
 
-      {/* show error if not found */}
       {error && (
         <motion.div
           className="errorMessage"
